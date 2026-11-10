@@ -1,7 +1,7 @@
 ---
 title: 我的第一篇博客
 published: 2026-11-10
-description: 记录我的编程学习和项目实践
+description: 记录我的编程学习和项目实践101010
 tags: [学习笔记]
 category: 技术
 draft: false
