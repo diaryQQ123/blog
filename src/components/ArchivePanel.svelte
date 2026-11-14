@@ -44,6 +44,8 @@ function formatTag(tagList: string[]) {
 onMount(async () => {
 	let filteredPosts: Post[] = sortedPosts;
 
+    console.log(sortedPosts,"sortedPosts");
+
 	if (tags.length > 0) {
 		filteredPosts = filteredPosts.filter(
 			(post) =>
@@ -78,7 +80,7 @@ onMount(async () => {
 		year: Number.parseInt(yearStr, 10),
 		posts: grouped[Number.parseInt(yearStr, 10)],
 	}));
-
+    // b-a 
 	groupedPostsArray.sort((a, b) => b.year - a.year);
 
 	groups = groupedPostsArray;

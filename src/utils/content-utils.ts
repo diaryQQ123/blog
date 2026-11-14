@@ -8,12 +8,14 @@ async function getRawSortedPosts() {
 	const allBlogPosts = await getCollection("posts", ({ data }) => {
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
+	console.log(allBlogPosts,"allBlogPosts");
 
 	const sorted = allBlogPosts.sort((a, b) => {
 		const dateA = new Date(a.data.published);
 		const dateB = new Date(b.data.published);
 		return dateA > dateB ? -1 : 1;
 	});
+	console.log(sorted,"sorted");
 	return sorted;
 }
 
